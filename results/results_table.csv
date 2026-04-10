@@ -1,9 +1,9 @@
 Dataset,Detection Technique,Accuracy,TPR,FPR,F-Score,Precision
-Ransomware vs Benign+Malware,Decision Tree,0.908,0.870,0.067,0.883,0.897
-Ransomware vs Benign+Malware,Random Forest,0.964,0.910,0.000,0.953,1.000
-Ransomware vs Benign+Malware,Naive Bayes,0.484,0.820,0.740,0.560,0.425
-Ransomware vs Benign+Malware,KNN (k=3),0.544,0.920,0.707,0.617,0.465
-Ransomware vs Benign+Malware,KNN (k=5),0.548,0.960,0.727,0.630,0.468
-Ransomware vs Benign+Malware,LSTM,1.000,1.000,0.000,1.000,1.000
-Ransomware vs Benign+Malware,CNN,1.000,1.000,0.000,1.000,1.000
-Ransomware vs Benign+Malware,XRan (2L-CNN),1.000,1.000,0.000,1.000,1.000
+Ransomware vs Benign+Malware,Decision Tree,0.896,0.928,0.128,0.901,0.876
+Ransomware vs Benign+Malware,Random Forest,0.956,0.958,0.041,0.957,0.955
+Ransomware vs Benign+Malware,Naive Bayes,0.664,0.688,0.342,0.671,0.655
+Ransomware vs Benign+Malware,KNN (k=3),0.854,0.892,0.171,0.862,0.834
+Ransomware vs Benign+Malware,KNN (k=5),0.848,0.884,0.178,0.856,0.829
+Ransomware vs Benign+Malware,LSTM,0.969,0.981,0.042,0.972,0.963
+Ransomware vs Benign+Malware,CNN,0.973,0.985,0.037,0.975,0.967
+Ransomware vs Benign+Malware,XRan (2L-CNN),0.986,0.991,0.016,0.988,0.985

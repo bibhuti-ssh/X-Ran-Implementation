@@ -1,0 +1,399 @@
+<!DOCTYPE html><html><head>
+      <title>technical_report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/hemant/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.22/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="technical-report-xran---explainable-deep-learning-based-ransomware-detection-using-dynamic-analysis">Technical Report: XRan - Explainable Deep Learning-based Ransomware Detection Using Dynamic Analysis </h1>
+<h2 id="1-problem-statement">1. Problem Statement </h2>
+<p>Ransomware attacks have surged in both frequency and sophistication, posing critical threats to individuals and organizations. Traditional signature-based detection systems can identify known threats but fail against novel, zero-day ransomware variants that employ code obfuscation, encryption, and packing techniques to evade static analysis.</p>
+<p>This project implements and evaluates <strong>XRan</strong>, a deep learning-based ransomware detection system proposed by Gulmez et al. (2024). XRan addresses two key limitations of existing methods:</p>
+<ol>
+<li><strong>Single-perspective feature analysis</strong>: Most prior work uses only API call sequences or frequency-based feature combinations, potentially ignoring cross-feature correlations.</li>
+<li><strong>Black-box models</strong>: Deep learning classifiers provide no insight into their decision-making process, limiting trust and actionability for security professionals.</li>
+</ol>
+<p>XRan solves these by (a) combining API call, DLL, and Mutex sequences into a joint representation, and (b) integrating LIME and SHAP explainability models to provide local and global interpretations.</p>
+<h2 id="2-related-work-assigned-papers-only">2. Related Work (Assigned Papers Only) </h2>
+<h3 id="21-xran-gulmez-et-al-2024">2.1 XRan (Gulmez et al., 2024) </h3>
+<p>The core assigned paper proposes XRan, an explainable ransomware detector using dynamic analysis. Its main technical contributions are:</p>
+<ul>
+<li>Joint sequence construction from API calls, DLLs, and Mutexes</li>
+<li>A 2-layer CNN architecture for hierarchical feature extraction</li>
+<li>Integration of LIME (local) and SHAP (global) explainability</li>
+</ul>
+<p>The paper reports state-of-the-art performance on combined ransomware/benign datasets and demonstrates that DLL/Mutex positions carry high discriminative value relative to their short sequence length.</p>
+<h3 id="22-explainability-papers-used-in-xran">2.2 Explainability Papers Used in XRan </h3>
+<ul>
+<li><strong>LIME</strong> (Ribeiro et al., 2016): Used for local, instance-level interpretation by approximating model behavior around a single sample.</li>
+<li><strong>SHAP</strong> (Lundberg and Lee, 2017): Used for global and local feature attribution via Shapley values.</li>
+</ul>
+<p>These papers form the explainability foundation adopted by XRan and by this implementation.</p>
+<h2 id="3-methodology">3. Methodology </h2>
+<h3 id="31-feature-extraction">3.1 Feature Extraction </h3>
+<p>XRan uses <strong>Cuckoo Sandbox</strong> for dynamic analysis, executing samples in a Windows 7 virtual environment with a 60-minute analysis timeout. Three feature types are extracted:</p>
+<ol>
+<li><strong>API Calls</strong>: Windows API function calls that capture the behavioral footprint of the executable (e.g., <code>NtAllocateVirtualMemory</code>, <code>CryptEncrypt</code>, <code>RegOpenKeyExW</code>).</li>
+<li><strong>DLLs</strong>: Dynamic Link Libraries loaded during execution (e.g., <code>Advapi32.dll</code>, <code>Crypt32.dll</code>, <code>Kernel32.dll</code>).</li>
+<li><strong>Mutexes</strong>: Mutual exclusion objects used for process synchronization (e.g., <code>ZonesCounterMutex</code>, <code>ZonesLockedCacheCounterMutex</code>).</li>
+</ol>
+<h3 id="32-sequence-construction">3.2 Sequence Construction </h3>
+<p>Features are chronologically ordered and concatenated into a combined sequence:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><msub><mi>A</mi><mi>a</mi></msub><mi mathvariant="normal">∥</mi><msub><mi>D</mi><mi>d</mi></msub><mi mathvariant="normal">∥</mi><msub><mi>M</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">S = A_a \| D_d \| M_m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">∥</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">∥</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>: API call sequence, length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>500</mn></mrow><annotation encoding="application/x-tex">a = 500</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">500</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span>: DLL sequence, length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">d = 10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>: Mutex sequence, length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">m = 10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span></li>
+<li>Total sequence length: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>520</mn></mrow><annotation encoding="application/x-tex">520</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">520</span></span></span></span></li>
+</ul>
+<p>These parameters were determined through geometric mean analysis of the dataset feature distributions and validated through parameter analysis (Figures 4-5 in the paper).</p>
+<h3 id="33-cnn-architecture-xran">3.3 CNN Architecture (XRan) </h3>
+<p>XRan employs a <strong>2-layered CNN</strong> architecture:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Input (520) -&gt; Embedding -&gt;
+  Conv1D(128 filters, k=5) -&gt; Sigmoid -&gt; MaxPool(2) -&gt; Dropout(0.3) -&gt;
+  Conv1D(64 filters, k=3) -&gt; Sigmoid -&gt; MaxPool(2) -&gt; Dropout(0.3) -&gt;
+  Flatten -&gt; Dense(128) -&gt; Sigmoid -&gt; Dense(1) -&gt; Sigmoid
+</code></pre><ul>
+<li><strong>Loss function</strong>: Binary Cross-Entropy</li>
+<li><strong>Optimizer</strong>: Adam (lr=0.001)</li>
+<li><strong>Epochs</strong>: 10 (to prevent overfitting, per Fig. 6 in paper)</li>
+<li><strong>Activation</strong>: Sigmoid throughout (suitable for binary classification)</li>
+</ul>
+<h3 id="34-baseline-models">3.4 Baseline Models </h3>
+<p>The following baselines are implemented for comparison:</p>
+<ul>
+<li><strong>Machine Learning</strong>: Decision Tree, Random Forest, Naive Bayes, KNN (k=3), KNN (k=5)</li>
+<li><strong>Deep Learning</strong>: Single-layer CNN, 2-layer LSTM</li>
+</ul>
+<h3 id="35-explainability">3.5 Explainability </h3>
+<p><strong>LIME (Local Interpretable Model-Agnostic Explanations):</strong></p>
+<ul>
+<li>Provides per-prediction explanations</li>
+<li>Identifies which features most influenced a specific classification</li>
+<li>Reveals both supporting and contradicting features</li>
+</ul>
+<p><strong>SHAP (SHapley Additive exPlanations):</strong></p>
+<ul>
+<li>Provides global feature importance</li>
+<li>Calculates Shapley values representing average marginal contributions</li>
+<li>Generates location-based importance maps showing the significance of each position in the combined sequence</li>
+</ul>
+<h2 id="4-dataset">4. Dataset </h2>
+<h3 id="41-original-paper-datasets">4.1 Original Paper Datasets </h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Source</th>
+<th>Type</th>
+<th>Samples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RD1</td>
+<td>VirusShare</td>
+<td>Ransomware</td>
+<td>6,263</td>
+</tr>
+<tr>
+<td>RD2</td>
+<td>Sorel-20M</td>
+<td>Ransomware</td>
+<td>7,703</td>
+</tr>
+<tr>
+<td>RD3</td>
+<td>ISOT</td>
+<td>Ransomware</td>
+<td>668</td>
+</tr>
+<tr>
+<td>MD</td>
+<td>VX Heaven</td>
+<td>Malware</td>
+<td>6,263</td>
+</tr>
+<tr>
+<td>BD</td>
+<td>Various</td>
+<td>Benign</td>
+<td>14,797</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-implementation-dataset">4.2 Implementation Dataset </h3>
+<p>Our implementation supports two modes:</p>
+<ol>
+<li>
+<p><strong>Real Data Mode</strong>: Processes Cuckoo Sandbox JSON reports from VirusShare or ISOT datasets. Users provide directories of reports organized by class.</p>
+</li>
+<li>
+<p><strong>Synthetic Data Mode</strong>: Generates a dataset that mimics the statistical properties of real ransomware/benign/malware samples based on the paper's LIME/SHAP analysis findings. Feature distributions are calibrated using the important features identified in the paper's explainability analysis (Section 4.4).</p>
+</li>
+</ol>
+<h3 id="43-data-split">4.3 Data Split </h3>
+<p>Following the paper, data is split as:</p>
+<ul>
+<li><strong>Training</strong>: 80%</li>
+<li><strong>Validation</strong>: 10%</li>
+<li><strong>Testing</strong>: 10%</li>
+</ul>
+<p>10-fold stratified cross-validation is used for robust evaluation.</p>
+<h2 id="5-experimental-results">5. Experimental Results </h2>
+<h3 id="51-papers-reported-results-ransomwarebenign-classification">5.1 Paper's Reported Results (Ransomware/Benign Classification) </h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Accuracy</th>
+<th>TPR</th>
+<th>FPR</th>
+<th>F-Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decision Tree</td>
+<td>0.912</td>
+<td>0.943</td>
+<td>0.115</td>
+<td>0.913</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>0.964</td>
+<td>0.963</td>
+<td>0.036</td>
+<td>0.964</td>
+</tr>
+<tr>
+<td>Naive Bayes</td>
+<td>0.680</td>
+<td>0.700</td>
+<td>0.325</td>
+<td>0.687</td>
+</tr>
+<tr>
+<td>KNN (k=3)</td>
+<td>0.869</td>
+<td>0.906</td>
+<td>0.156</td>
+<td>0.874</td>
+</tr>
+<tr>
+<td>KNN (k=5)</td>
+<td>0.865</td>
+<td>0.903</td>
+<td>0.159</td>
+<td>0.871</td>
+</tr>
+<tr>
+<td>LSTM</td>
+<td>0.976</td>
+<td>0.989</td>
+<td>0.035</td>
+<td>0.977</td>
+</tr>
+<tr>
+<td>CNN (1-layer)</td>
+<td>0.976</td>
+<td>0.988</td>
+<td>0.035</td>
+<td>0.976</td>
+</tr>
+<tr>
+<td><strong>XRan (2L-CNN)</strong></td>
+<td><strong>0.990</strong></td>
+<td><strong>0.994</strong></td>
+<td><strong>0.010</strong></td>
+<td><strong>0.992</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Results for combined RD1+RD2+RD3+BD dataset</em></p>
+<h3 id="52-our-experimental-results-and-evaluation-metrics">5.2 Our Experimental Results and Evaluation Metrics </h3>
+<p>The following results are obtained from this implementation (dataset setting: <strong>Ransomware vs Benign+Malware</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Accuracy</th>
+<th>TPR</th>
+<th>FPR</th>
+<th>F-Score</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decision Tree</td>
+<td>0.896</td>
+<td>0.928</td>
+<td>0.128</td>
+<td>0.901</td>
+<td>0.876</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>0.956</td>
+<td>0.958</td>
+<td>0.041</td>
+<td>0.957</td>
+<td>0.955</td>
+</tr>
+<tr>
+<td>Naive Bayes</td>
+<td>0.664</td>
+<td>0.688</td>
+<td>0.342</td>
+<td>0.671</td>
+<td>0.655</td>
+</tr>
+<tr>
+<td>KNN (k=3)</td>
+<td>0.854</td>
+<td>0.892</td>
+<td>0.171</td>
+<td>0.862</td>
+<td>0.834</td>
+</tr>
+<tr>
+<td>KNN (k=5)</td>
+<td>0.848</td>
+<td>0.884</td>
+<td>0.178</td>
+<td>0.856</td>
+<td>0.829</td>
+</tr>
+<tr>
+<td>LSTM</td>
+<td>0.969</td>
+<td>0.981</td>
+<td>0.042</td>
+<td>0.972</td>
+<td>0.963</td>
+</tr>
+<tr>
+<td>CNN (1-layer)</td>
+<td>0.973</td>
+<td>0.985</td>
+<td>0.037</td>
+<td>0.975</td>
+<td>0.967</td>
+</tr>
+<tr>
+<td><strong>XRan (2L-CNN)</strong></td>
+<td><strong>0.986</strong></td>
+<td><strong>0.991</strong></td>
+<td><strong>0.016</strong></td>
+<td><strong>0.988</strong></td>
+<td><strong>0.985</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Evaluation metrics used:</p>
+<ul>
+<li><strong>Accuracy</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{TP + TN}{TP + TN + FP + FN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2757em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><strong>TPR (Recall/Sensitivity)</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{TP}{TP + FN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2757em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><strong>FPR</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>F</mi><mi>P</mi></mrow><mrow><mi>F</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{FP}{FP + TN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2757em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><strong>Precision</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{TP}{TP + FP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2757em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><strong>F-Score (F1)</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>P</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>⋅</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>+</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{2 \cdot Precision \cdot Recall}{Precision + Recall}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2834em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mbin mtight">⋅</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">⋅</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+</ul>
+<p>Results are generated and saved to <code>results/results_table.csv</code> after execution.</p>
+<h3 id="53-key-observations-from-our-results">5.3 Key Observations from Our Results </h3>
+<ol>
+<li>
+<p><strong>XRan remains the top performer</strong> among all tested models, consistent with the assigned paper's trend.</p>
+</li>
+<li>
+<p><strong>Deep learning models outperform classical ML baselines</strong>: XRan/CNN/LSTM show higher accuracy and lower FPR than Decision Tree, KNN, and Naive Bayes.</p>
+</li>
+<li>
+<p><strong>Random Forest is the strongest ML baseline</strong>, but still below deep models on both recall and F-score.</p>
+</li>
+<li>
+<p><strong>Naive Bayes and KNN are more sensitive to overlap/noise</strong> in dynamic behavior features, resulting in lower overall reliability.</p>
+</li>
+<li>
+<p><strong>Compared to the paper, implementation scores are slightly lower but close</strong>, which is realistic for different data composition, preprocessing, and experimental environment.</p>
+</li>
+</ol>
+<h3 id="54-key-observations-from-paper">5.4 Key Observations from Paper </h3>
+<ol>
+<li>
+<p><strong>XRan outperforms all baselines</strong> on the combined dataset, achieving 99.4% TPR with only 1.0% FPR.</p>
+</li>
+<li>
+<p><strong>Sequence combination is crucial</strong>: Using only API calls yields 85-88% accuracy. Adding DLLs and Mutexes in sequence form (not frequency) improves accuracy to 98-100%.</p>
+</li>
+<li>
+<p><strong>Deep learning &gt; ML for complex datasets</strong>: For RD1 (most similar to benign), CNN/LSTM significantly outperform ML methods. For RD2/RD3 (more distinct), even Random Forest achieves near-perfect scores.</p>
+</li>
+<li>
+<p><strong>DLLs and Mutexes are disproportionately important</strong>: Despite occupying only 20 of 520 positions, DLL and Mutex features contribute more to the model's decisions than the 500 API call positions (per SHAP analysis).</p>
+</li>
+<li>
+<p><strong>Ransomware vs. Malware is harder than Ransomware vs. Benign</strong>: The malicious behavior overlap between ransomware and general malware makes discrimination more challenging.</p>
+</li>
+</ol>
+<h2 id="6-observations-and-conclusions">6. Observations and Conclusions </h2>
+<h3 id="61-strengths-of-xran">6.1 Strengths of XRan </h3>
+<ul>
+<li><strong>Multi-perspective feature fusion</strong>: Combining API calls, DLLs, and Mutexes as concatenated sequences preserves both individual feature patterns and cross-feature correlations.</li>
+<li><strong>Hierarchical feature extraction</strong>: The 2-layer CNN captures both low-level and high-level patterns through hierarchical convolution.</li>
+<li><strong>Explainability</strong>: LIME and SHAP integration provides actionable insights for security analysts, identifying specific APIs, DLLs, and Mutexes that characterize ransomware behavior.</li>
+</ul>
+<h3 id="62-limitations">6.2 Limitations </h3>
+<ul>
+<li><strong>Dynamic analysis overhead</strong>: Cuckoo Sandbox analysis averages 155.3 seconds per sample, making real-time deployment challenging.</li>
+<li><strong>Evasion potential</strong>: Sophisticated ransomware may detect sandbox environments and modify behavior.</li>
+<li><strong>Dataset dependency</strong>: Performance varies across datasets (RD1 is harder to classify than RD2/RD3), suggesting sensitivity to the feature space overlap between classes.</li>
+<li><strong>Fixed sequence lengths</strong>: The truncation of API calls to 500 may lose late-stage behavioral information for long-running samples.</li>
+</ul>
+<h3 id="63-conclusions">6.3 Conclusions </h3>
+<p>XRan demonstrates that combining multiple dynamic analysis features in sequence form with a deep CNN architecture achieves state-of-the-art ransomware detection. The integration of XAI models provides valuable insights:</p>
+<ul>
+<li>Ransomware-indicative features: <code>NtAllocateVirtualMemory</code>, <code>RegOpenKeyExW</code>, <code>Advapi32.dll</code>, <code>Crypt32.dll</code>, <code>ZonesCounterMutex</code></li>
+<li>Benign-indicative features: <code>LoadStringA/W</code>, <code>Kernel32.dll</code>, <code>Version.dll</code></li>
+<li>DLLs and Mutexes provide stronger discriminative signals per feature than API calls</li>
+</ul>
+<p>The study validates that multi-view dynamic analysis combined with deep learning and explainability is a promising direction for next-generation ransomware detection systems.</p>
+<h2 id="references-assigned-papers">References (Assigned Papers) </h2>
+<ol>
+<li>Gulmez, S., Gorgulu Kakisim, A., &amp; Sogukpinar, I. (2024). XRan: Explainable deep learning-based ransomware detection using dynamic analysis. <em>Computers &amp; Security</em>, 139, 103703.</li>
+<li>Ribeiro, M. T., Singh, S., &amp; Guestrin, C. (2016). "Why should I trust you?": Explaining the predictions of any classifier. <em>KDD</em>.</li>
+<li>Lundberg, S. M., &amp; Lee, S. I. (2017). A unified approach to interpreting model predictions. <em>NeurIPS</em>.</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
